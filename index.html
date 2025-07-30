@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation</title>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav_logo">Sajid</a>
+
+      <div class="nav_menu" id="nav-menu">
+        <ul class="nav_list">
+          <li class="nav_item"><a href="#" class="nav_links"><i class="ri-arrow-right-up-line"></i><span>Home</span></a></li>
+          <li class="nav_item"><a href="#" class="nav_links"><i class="ri-arrow-right-up-line"></i><span>About Us</span></a></li>
+          <li class="nav_item"><a href="#" class="nav_links"><i class="ri-arrow-right-up-line"></i><span>Services</span></a></li>
+          <li class="nav_item"><a href="#" class="nav_links"><i class="ri-arrow-right-up-line"></i><span>Blog</span></a></li>
+          <li class="nav_item"><a href="#" class="nav_links"><i class="ri-arrow-right-up-line"></i><span>Maps</span></a></li>
+          <li class="nav_item"><a href="#" class="nav_links"><i class="ri-arrow-right-up-line"></i><span>Contact Us</span></a></li>
+        </ul>
+
+        <div class="nav_close" id="nav-close">
+          <i class="ri-close-large-line"></i>
+        </div>
+
+        <div class="nav_social">
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-github-line"></i></a>
+          <a href="#"><i class="ri-dribbble-line"></i></a>
+          <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="nav_toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+  </header>
+ <section>
+    <main>
+        
+    </main>
+ </section>
+
+  <script>
+    const navMenu = document.getElementById("nav-menu");
+    const navToggle = document.getElementById("nav-toggle");
+    const navClose = document.getElementById("nav-close");
+
+    if (navToggle) {
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.add("show-menu");
+      });
+    }
+
+    if (navClose) {
+      navClose.addEventListener("click", () => {
+        navMenu.classList.remove("show-menu");
+      });
+    }
+
+    // Optional: Close menu on link click (mobile UX improvement)
+    document.querySelectorAll('.nav_links').forEach(link =>
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+      })
+    );
+  </script>
+</body>
+
+</html>
